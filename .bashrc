@@ -9,7 +9,7 @@
 #export EDITOR="$(if [[ -n $DISPLAY ]]; then echo 'leafpad'; else echo 'nano'; fi)"		# leafpad, nano
 
 # PS1='\[\e[0;35m\]\u\[\e[m\] \[\e[0;34m\]\w\[\e[m\] \[\e[0;35m\]->\[\e[m\] \[\e[0;37m\]'	# user
-PS1='\[\e[0;34m\]\W\[\e[m\]\[\e[0;35m\]:\[\e[m\] \[\e[0;37m\]'					# new
+PS1='\[\e[0;34m\]\W\[\e[m\]\[\e[0;35m\]:\[\e[m\] \[\e[0;37m\]'					# new PS1
 # PS1='\[\e[0;31m\]\u\[\e[m\] \[\e[0;34m\]\w\[\e[m\] \[\e[0;31m\]\$\[\e[m\] \[\e[2;37m\]'	# root
 # PS1='\u \W $ '										# default
 
