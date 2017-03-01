@@ -4,15 +4,15 @@
 set $mod Mod1
 
 # font
-#font pango:DejaVu Sans Mono 8					# default setting
+#font pango:DejaVu Sans Mono 8                  # default setting
 font pango:System San Francisco Display 10
 
 # thin borders
 # hide_edge_borders both
 
 # variables for window colors
-set $bg-color 	         #004658
-set $inactive-bg-color   #004658 
+set $bg-color            #1d1d26
+set $inactive-bg-color   #1d1d26
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
@@ -22,7 +22,7 @@ set $urgent-bg-color     #E53935
 client.focused          $bg-color           $bg-color          $text-color          #004658
 client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #004658
 client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #004658
-client.urgent 		$urgent-bg-color    $urgent-bg-color   $text-color 	    #004658
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #004658
 
 # gaps
 gaps inner 5 
@@ -32,7 +32,7 @@ gaps outer 5
 floating_modifier $mod
 
 # start a terminal
-#bindsym $mod+Return exec i3-sensible-terminal			# default setting
+#bindsym $mod+Return exec i3-sensible-terminal          # default setting
 bindsym $mod+Return exec termite
 
 # kill focused window
@@ -40,7 +40,7 @@ bindsym $mod+Shift+q kill
 
 # start a program launcher (rofi/dmenu)
 #bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 800 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 18"
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -modi drun -show drun 
 
 # change focus
 bindsym $mod+j focus left
@@ -154,7 +154,7 @@ bar {
 }
 
 # startup
-exec_always feh --bg-scale /home/mike/Wallpaper/cyberpunk	# wallpaper
+exec_always feh --bg-scale /home/mike/Wallpaper/firewatch-mod # wallpaper
 
 # Floating windows by default
 # for_window [class="PROGRAM"] floating enable			# default syntax
