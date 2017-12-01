@@ -4,7 +4,7 @@ set nocompatible
 "set t_Co=256
 "set background=dark
 syntax enable
-colorscheme hipster
+"colorscheme hipster
 
 " Options
 set backspace=2

@@ -6,10 +6,12 @@
 [[ $- != *i* ]] && return
 
 # environment variables
-export EDITOR='/usr/bin/vim'                # set vim as default editor
+export PATH=$PATH:/home/mike/.bin           # adds ~/.bin to PATH
+export EDITOR=/usr/bin/vim                  # set vim as default editor
+export BROWSER=/usr/bin/firefox             # set firefox as default browser
 set -o vi                                   # set vi keybindings in terminal
 export HISTCONTROL=ignoredups               # Ingore duplicates in command history
-bind TAB:menu-complete
+bind TAB:menu-complete                      # inline tab complete
 
 # PS1
 PS1='\[\e[0;34m\]\W\[\e[m\]\[\e[0;35m\]:\[\e[m\] \[\e[0;37m\]'                              # new PS1
@@ -17,15 +19,13 @@ PS1='\[\e[0;34m\]\W\[\e[m\]\[\e[0;35m\]:\[\e[m\] \[\e[0;37m\]'                  
 # PS1='\[\e[0;31m\]\u\[\e[m\] \[\e[0;34m\]\w\[\e[m\] \[\e[0;31m\]\$\[\e[m\] \[\e[2;37m\]'   # root
 
 
-# System aliases
+# system aliases
 alias ls='ls --color=auto'
 alias la='ls -la'
 alias x='startx'
 alias q='exit'
-alias c='clear'
 alias off='sudo shutdown -h now'
 alias reboot='sudo reboot'
-alias s='sudo'
 alias svim='sudo vim'
 alias rebash='source /home/mike/.bashrc'
 alias ..='cd ../'
@@ -33,16 +33,16 @@ alias ...='cd ../../'
 alias ....='cd ../../..'
 alias wifi='sudo wifi-menu -o'
 
-
 # pacman aliases
-alias pac='sudo /usr/bin/pacman -S'                     # 'default action'      - install one or more packages
+alias pac='/usr/bin/pacaur -S'                          # 'default action'      - install one or more packages
 alias pacdu='sudo /usr/bin/pacman -Syy'                 # '[d]atabase [u]pdate' - downloads copy of the master package database
-alias pacu='pacaur -Syu'                                # '[u]pdate'            - upgrade all packages to their newest version
+alias pacu='/usr/bin/pacaur -Syu'                       # '[u]pdate'            - upgrade all packages to their newest version
+alias pacduu='/usr/bin/pacaur -Syyu'                    # '[Syy] + [Syu]        - updates master package database and all packages
 alias pacr='sudo /usr/bin/pacman -Rns'                  # '[r]emove'            - uninstall one or more packages
-alias pacs='/usr/bin/pacman -Ss'                        # '[s]earch'            - search for a package using one or more keywords
+alias pacs='/usr/bin/pacaur -Ss'                        # '[s]earch'            - search for a package using one or more keywords
 alias paci='/usr/bin/pacman -Si'                        # '[i]nfo'              - show information about a package
 alias paclo='/usr/bin/pacman -Qdt'                      # '[l]ist [o]rphans'    - list all packages which are orphaned
-alias pacc='sudo /usr/bin/pacman -Scc'                  # '[c]lean cache'       - delete all not currently installed package files
+alias pacc='sudo /usr/bin/pacman -Sc'                   # '[c]lean cache'       - delete all not currently installed package files
 alias paclf='/usr/bin/pacman -Ql'                       # '[l]ist [f]iles'      - list all files installed by a given package
 alias pacq='/usr/bin/pacman -Qs'                        # '[q]uery'             - search for locally installed packages
 alias pacexpl='sudo /usr/bin/pacman -D --asexplicit'    # 'mark as [expl]icit'  - mark one or more packages as explicitly installed 
@@ -56,3 +56,6 @@ alias brc='vim ~/.bashrc'                                   # bashrc file
 alias i3c='vim /home/mike/.config/i3/config'                # ic config
 alias termc='vim /home/mike/.config/termite/config'         # termite config
 alias vrc='vim /home/mike/.vimrc'                           # vimrc file
+
+# program aliases
+alias rss='/usr/bin/newsbeuter'
