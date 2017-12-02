@@ -1,0 +1,3 @@
+#! /bin/bash
+
+java -jar /usr/share/java/ripme-git-1.4.16.jar -l /home/mike/Downloads -u "$1"
