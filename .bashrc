@@ -21,12 +21,12 @@ PS1='\[\e[0;34m\]\W\[\e[m\]\[\e[0;35m\]:\[\e[m\] \[\e[0;37m\]'                  
 
 # system aliases
 alias ls='ls --color=auto'
+alias ll='ls -l'
 alias la='ls -la'
 alias x='startx'
 alias q='exit'
 alias off='sudo shutdown -h now'
 alias reboot='sudo reboot'
-alias svim='sudo vim'
 alias rebash='source /home/mike/.bashrc'
 alias ..='cd ../'
 alias ...='cd ../../'
@@ -58,4 +58,4 @@ alias termc='vim /home/mike/.config/termite/config'         # termite config
 alias vrc='vim /home/mike/.vimrc'                           # vimrc file
 
 # program aliases
-alias rss='/usr/bin/newsbeuter'
+alias rss='/usr/bin/newsboat'
