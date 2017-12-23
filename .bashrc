@@ -36,8 +36,8 @@ alias wifi='sudo wifi-menu -o'
 # pacman aliases
 alias pac='/usr/bin/pacman -S'                          # 'default action'      - install one or more packages
 alias pacdu='sudo /usr/bin/pacman -Syy'                 # '[d]atabase [u]pdate' - downloads copy of the master package database
-alias pacu='sudo /usr/bin/pacman -Syu'                       # '[u]pdate'            - upgrade all packages to their newest version
-alias pacua='sudo /usr/bin/pacman -Syyu && cower -u'         # '[u]date + [a]ll      - updates master package database and all packages
+alias pacu='sudo /usr/bin/pacman -Syu'                  # '[u]pdate'            - upgrade all packages to their newest version
+alias pacua='sudo /usr/bin/pacman -Syyu && cower -u'    # '[u]date + [a]ll      - updates master package database and all packages
 alias pacr='sudo /usr/bin/pacman -Rns'                  # '[r]emove'            - uninstall one or more packages
 alias pacs='/usr/bin/pacman -Ss'                        # '[s]earch'            - search for a package using one or more keywords
 alias paci='/usr/bin/pacman -Si'                        # '[i]nfo'              - show information about a package
