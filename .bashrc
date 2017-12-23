@@ -8,7 +8,7 @@
 # environment variables
 export PATH=$PATH:/home/mike/.bin           # adds ~/.bin to PATH
 export EDITOR=/usr/bin/vim                  # set vim as default editor
-export BROWSER=/usr/bin/firefox             # set firefox as default browser
+export BROWSER=/usr/bin/waterfox            # set waterfox as default browser
 set -o vi                                   # set vi keybindings in terminal
 export HISTCONTROL=ignoredups               # Ingore duplicates in command history
 bind TAB:menu-complete                      # inline tab complete
@@ -34,12 +34,12 @@ alias ....='cd ../../..'
 alias wifi='sudo wifi-menu -o'
 
 # pacman aliases
-alias pac='/usr/bin/pacaur -S'                          # 'default action'      - install one or more packages
+alias pac='/usr/bin/pacman -S'                          # 'default action'      - install one or more packages
 alias pacdu='sudo /usr/bin/pacman -Syy'                 # '[d]atabase [u]pdate' - downloads copy of the master package database
-alias pacu='/usr/bin/pacaur -Syu'                       # '[u]pdate'            - upgrade all packages to their newest version
-alias pacduu='/usr/bin/pacaur -Syyu'                    # '[Syy] + [Syu]        - updates master package database and all packages
+alias pacu='sudo /usr/bin/pacman -Syu'                       # '[u]pdate'            - upgrade all packages to their newest version
+alias pacua='sudo /usr/bin/pacman -Syyu && cower -u'         # '[u]date + [a]ll      - updates master package database and all packages
 alias pacr='sudo /usr/bin/pacman -Rns'                  # '[r]emove'            - uninstall one or more packages
-alias pacs='/usr/bin/pacaur -Ss'                        # '[s]earch'            - search for a package using one or more keywords
+alias pacs='/usr/bin/pacman -Ss'                        # '[s]earch'            - search for a package using one or more keywords
 alias paci='/usr/bin/pacman -Si'                        # '[i]nfo'              - show information about a package
 alias paclo='/usr/bin/pacman -Qdt'                      # '[l]ist [o]rphans'    - list all packages which are orphaned
 alias pacc='sudo /usr/bin/pacman -Sc'                   # '[c]lean cache'       - delete all not currently installed package files
