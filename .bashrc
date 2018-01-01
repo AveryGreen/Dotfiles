@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 # environment variables
-export PATH=$PATH:/home/mike/.bin           # adds ~/.bin to PATH
+export PATH=$PATH:/home/$USER/.bin           # adds ~/.bin to PATH
 export EDITOR=/usr/bin/vim                  # set vim as default editor
 export BROWSER=/usr/bin/waterfox            # set waterfox as default browser
 set -o vi                                   # set vi keybindings in terminal
@@ -27,7 +27,7 @@ alias x='startx'
 alias q='exit'
 alias off='sudo shutdown -h now'
 alias reboot='sudo reboot'
-alias rebash='source /home/mike/.bashrc'
+alias rebash='source /home/$USER/.bashrc'
 alias ..='cd ../'
 alias ...='cd ../../'
 alias ....='cd ../../..'
@@ -53,9 +53,9 @@ alias pacro='sudo /usr/bin/pacman -Rns $(/usr/bin/pacman -Qqdt)'
 
 # config files
 alias brc='vim ~/.bashrc'                                   # bashrc file
-alias i3c='vim /home/mike/.config/i3/config'                # ic config
-alias termc='vim /home/mike/.config/termite/config'         # termite config
-alias vrc='vim /home/mike/.vimrc'                           # vimrc file
+alias i3c='vim /home/$USER/.config/i3/config'               # ic config
+alias termc='vim /home/$USER/.config/termite/config'        # termite config
+alias vrc='vim /home/$USER/.vimrc'                          # vimrc file
 
 # program aliases
 alias rss='/usr/bin/newsboat'
