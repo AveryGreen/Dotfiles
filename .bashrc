@@ -9,7 +9,7 @@
 export PATH=$PATH:/home/$USER/.bin           # adds ~/.bin to PATH
 export EDITOR=/usr/bin/vim                  # set vim as default editor
 export BROWSER=/usr/bin/waterfox            # set waterfox as default browser
-set -o vi                                   # set vi keybindings in terminal
+# set -o vi                                   # set vi keybindings in terminal
 export HISTCONTROL=ignoredups               # Ingore duplicates in command history
 bind TAB:menu-complete                      # inline tab complete
 
@@ -65,10 +65,9 @@ alias ....='cd ../../..'
 alias wifi='sudo wifi-menu -o'
 
 # pacman aliases
-alias pac='/usr/bin/pacman -S'                          # 'default action'      - install one or more packages
+alias pac='sudo /usr/bin/pacman -S'                          # 'default action'      - install one or more packages
 alias pacdu='sudo /usr/bin/pacman -Syy'                 # '[d]atabase [u]pdate' - downloads copy of the master package database
 alias pacu='sudo /usr/bin/pacman -Syu'                  # '[u]pdate'            - upgrade all packages to their newest version
-alias pacua='sudo /usr/bin/pacman -Syyu && cower -u'    # '[u]date + [a]ll      - updates master package database and all packages
 alias pacr='sudo /usr/bin/pacman -Rns'                  # '[r]emove'            - uninstall one or more packages
 alias pacs='/usr/bin/pacman -Ss'                        # '[s]earch'            - search for a package using one or more keywords
 alias paci='/usr/bin/pacman -Si'                        # '[i]nfo'              - show information about a package
@@ -88,5 +87,15 @@ alias i3c='vim /home/$USER/.config/i3/config'               # ic config
 alias termc='vim /home/$USER/.config/termite/config'        # termite config
 alias vrc='vim /home/$USER/.vimrc'                          # vimrc file
 
-# program aliases
-alias rss='/usr/bin/newsboat'
+# todo.txt aliases
+alias t='todo.sh'           # call todo.sh script
+alias tadd='todo.sh -t add'
+alias trm='todo.sh -n rm'
+alias tinbox='todo.sh list -+ -@'
+alias edittodo='vim /home/$USER/Notes/todo.txt'
+complete -F _todo t
+
+# Todo.txt bash completion
+if [ -f /home/$USER/.todo/todo_completion ]; then
+    . /home/$USER/.todo/todo_completion
+fi
